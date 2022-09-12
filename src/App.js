@@ -1,23 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import List from "./List";
+
+const list = [
+  {
+    title: "1",
+    child: [
+      {
+        title: "1.1",
+        child: [
+          {
+            title: "1.1.1",
+          },
+          {
+            title: "1.1.2",
+          },
+        ],
+      },
+      {
+        title: "1.2",
+      },
+    ],
+  },
+  {
+    title: "2",
+    child: [
+      {
+        title: "2.1",
+        child: [
+          {
+            title: "2.1.1",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "3",
+  },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <List items={list} />
     </div>
   );
 }
